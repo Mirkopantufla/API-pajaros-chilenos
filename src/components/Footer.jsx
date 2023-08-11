@@ -1,68 +1,85 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../styles/Footer.css'
 import { BsFillHouseDoorFill, BsMap } from 'react-icons/bs'
 import { MdContactMail } from 'react-icons/md'
 
 const Footer = () => {
+
+    const classnameLink = "link-offset-2 link-offset-3-hover link-underline-dark link-underline-opacity-0 link-underline-opacity-75-hover text-dark";
+
     return (
         <footer className='container-fluid footer-color'>
             <div className="row">
-                <div className="col-4 my-4">
-                    <h3 className='text-center'>Contacto</h3>
-                    <div className='d-flex justify-content-center align-items-center'>
-                        <BsFillHouseDoorFill className='display-1 p-1 border border-dark border-3 rounded-circle' />
-                        <ul className='d-flex flex-column align-items-center'>
+                <div className="col-lg-4 my-4">
+                    <h3 className='text-center'>Birds Index</h3>
+                    <div className='d-flex justify-content-center align-items-top'>
+                        <BsFillHouseDoorFill className='display-1 p-1 border border-dark' />
+                        <ul className='d-flex flex-column align-items-center fs-5'>
                             <li className='list-group'>
-                                Vestibulum imperdiet mattis velit
+                                <Link
+                                    className={classnameLink}
+                                    to='/'>
+                                    Vestibulum imperdiet mattis velit
+                                </Link>
                             </li>
                             <li className='list-group'>
-                                Maecenas ac ullamcorper nibh.
+                                <Link
+                                    className={classnameLink}
+                                    to='/'>
+                                    Vestibulum imperdiet mattis velit
+                                </Link>
                             </li>
                             <li className='list-group'>
-                                Vestibulum imperdiet mattis velit
+                                <Link
+                                    className={classnameLink}
+                                    to='/'>
+                                    Vestibulum imperdiet mattis velit
+                                </Link>
                             </li>
                             <li className='list-group'>
-                                Vestibulum imperdiet mattis velit
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div className="col-4 my-4">
-                    <h3 className='text-center'>Contacto</h3>
-                    <div className='d-flex justify-content-center align-items-center'>
-                        <BsMap className='display-1 p-1 border border-dark border-3 rounded-circle' />
-                        <ul className='d-flex flex-column align-items-center'>
-                            <li className='list-group'>
-                                Vestibulum imperdiet mattis velit
-                            </li>
-                            <li className='list-group'>
-                                Vestibulum imperdiet mattis velit
-                            </li>
-                            <li className='list-group'>
-                                Vestibulum imperdiet mattis velit
-                            </li>
-                            <li className='list-group'>
-                                Vestibulum imperdiet mattis velit
+                                <Link
+                                    className={classnameLink}
+                                    to='/'>
+                                    Vestibulum imperdiet mattis velit
+                                </Link>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div className="col-4 my-4">
+                <div className="col-lg-4 my-4">
+                    <h3 className='text-center'>Ubicación</h3>
+                    <div className='d-flex justify-content-center align-items-top'>
+                        <BsMap className='display-1 p-1 border border-dark' />
+                        <ul className='d-flex flex-column align-items-start fs-5'>
+                            <li className='list-group'>
+                                Vestibulum imperdiet mattis velit
+                            </li>
+                            <li className='list-group'>
+                                Vestibulum imperdiet mattis velit
+                            </li>
+                            <li className='list-group'>
+                                Vestibulum imperdiet mattis velit
+                            </li>
+                            <li className='list-group'>
+                                Neque porro quisquam est qui dolorem ipsum quia dolor sit amet
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="col-lg-4 my-4">
                     <h3 className='text-center'>Contacto</h3>
-                    <div className='d-flex justify-content-center align-items-center'>
-                        <MdContactMail className='display-1 p-1 border border-dark border-3 rounded-circle' />
-                        <ul className='d-flex flex-column align-items-center'>
+                    <div className='d-flex justify-content-center align-items-top'>
+                        <MdContactMail className='display-1 p-1 border border-dark' />
+                        <ul className='d-flex flex-column align-items-start fs-5'>
                             <li className='list-group'>
-                                Vestibulum imperdiet mattis velit
+                                Mirko Sergei Pasten Carcamo
                             </li>
                             <li className='list-group'>
-                                Vestibulum imperdiet mattis velit
+                                Lampa, Region Metropolitana, Chile
                             </li>
                             <li className='list-group'>
-                                Vestibulum imperdiet mattis velit
-                            </li>
-                            <li className='list-group'>
-                                Vestibulum imperdiet mattis velit
+                                mirko.pasten.dev@gmail.com
                             </li>
                         </ul>
                     </div>

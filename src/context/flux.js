@@ -4,7 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             apiURL: "https://aves.ninjas.cl/api/birds",
             birds: null,
             selectedBird: null,
-            favoritos: null
+            favorites: []
         },
         actions: {
             handleInput: () => {
@@ -76,33 +76,36 @@ const getState = ({ getStore, getActions, setStore }) => {
                 }
             },
             getLocalFavorites: () => {
-                if (localStorage.getItem('favoritos')) {
-                    let localFavorites = localStorage.getItem('favoritos');
+                if (localStorage.getItem('favorites')) {
+                    let localFavorites = localStorage.getItem('favorites');
                     setStore({ favorites: JSON.parse(localFavorites) })
                 }
             },
             saveLocalFavorites: () => {
                 const { favorites } = getStore();
 
-                localStorage.setItem('favoritos', JSON.stringify(favorites))
+                localStorage.setItem('favorites', JSON.stringify(favorites))
             },
-            addFavorite: (element) => {
+            addFavorite: (bird) => {
 
                 const { favorites } = getStore();
 
-                if (favorites.includes(element)) {
-                    getActions().deleteFavorite(element);
-                    console.log('El personaje ya existe en favoritos')
+                let isFavorite = favorites.filter((fav) => fav.uid == bird.uid)
+
+                if (isFavorite.length == 0) {
+                    // Si ya existe en favoritos, eliminar de la lista
+                    setStore({ favorites: favorites.concat(bird) })
                 } else {
-                    setStore({ favorites: favorites.concat(element) })
+
+                    getActions().deleteFavorite(bird);
                 }
                 getActions().saveLocalFavorites();
             },
-            deleteFavorite: (item) => {
+            deleteFavorite: (bird) => {
 
                 const { favorites } = getStore();
 
-                setStore({ favorites: favorites.filter(fav => fav !== item) })
+                setStore({ favorites: favorites.filter(fav => fav.uid !== bird.uid) })
 
                 getActions().saveLocalFavorites();
 

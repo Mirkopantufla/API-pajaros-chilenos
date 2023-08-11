@@ -59,8 +59,8 @@ const BirdInformation = () => {
                             <p>{selectedBird ? selectedBird?.habitat : ""}</p>
                             <h5 className="card-subtitle text-body-secondary">{selectedBird?.didyouknow ? "Sabias que:" : ""}</h5>
                             <p>{selectedBird ? selectedBird?.didyouknow : ""}</p>
-                            <h5 className="card-subtitle text-body-secondary">{selectedBird ? selectedBird?.iucn.title : ""}</h5>
-                            <p>{selectedBird ? selectedBird?.iucn.description : ""}</p>
+                            <h5 className="card-subtitle text-body-secondary">{selectedBird ? selectedBird?.iucn?.title : ""}</h5>
+                            <p>{selectedBird ? selectedBird?.iucn?.description : ""}</p>
                         </div>
                     </div>
                 </div>

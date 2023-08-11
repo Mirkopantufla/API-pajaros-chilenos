@@ -19,14 +19,14 @@ const injectContext = PassedComponent => {
 
         useEffect(() => {
 
-            console.log(state.actions.getLocalBirds())
-            state.actions.getAllBirds()
-
-            if (state.actions.getLocalBirds == false) {
-
+            if (localStorage.getItem('favorites')) {
+                state.actions.getLocalFavorites()
             }
-            if (state.actions.getLocalBirds == true) {
+
+            if (sessionStorage.getItem('birds')) {
                 state.actions.getLocalBirds()
+            } else {
+                state.actions.getAllBirds()
             }
 
         }, []);

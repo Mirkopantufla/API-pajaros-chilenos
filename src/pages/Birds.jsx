@@ -50,10 +50,10 @@ const Home = () => {
                     {
                         //Valido si existen los 'birds' dentro de 'store', si hay, que me traiga 9 resultados de todo el array
                         //previamente guardado en el context
-                        store.birds ?
-                            store.birds.slice(page == 1 ? 0 : (9 * page) - 9, 9 * page).map((bird) => {
+                        store?.birds ?
+                            store?.birds?.slice(page == 1 ? 0 : (9 * page) - 9, 9 * page).map((bird) => {
                                 return (
-                                    <BirdCard key={bird.sort} birdUID={bird.uid} birdNameTittle={bird.name.spanish} birdImage={bird.images.full} />
+                                    <BirdCard key={bird.sort} bird={bird} />
                                 )
                             })
                             :

@@ -1,0 +1,18 @@
+.custom-star {
+    color: rgba(214, 214, 0, 0.5);
+}
+
+.custom-star:hover {
+    color: rgba(139, 139, 0, 0.5);
+}
+
+.custom-star-active {
+    color: rgb(214, 214, 0);
+    box-shadow: rgb(214, 214, 0) 0 0 20px 5px;
+}
+
+.bird-image {
+    height: 100%;
+    width: 100%;
+    object-fit: inherit
+}
