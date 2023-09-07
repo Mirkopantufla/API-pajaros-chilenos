@@ -63,7 +63,7 @@ const Navbar = () => {
                                         <li key={index}
                                             className="bg-dark text-light rounded m-1 d-flex justify-content-between p-2 fs-5">
                                             <Link
-                                                href={`/birds/${favorite?.uid}`}
+                                                to={`/birds/${favorite?.uid}`}
                                                 className="p-2 m-auto"
                                                 style={{ width: "200px" }}
                                             >
