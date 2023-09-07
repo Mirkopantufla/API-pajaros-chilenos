@@ -12,6 +12,8 @@ const BirdCard = ({ bird }) => {
 
         let isFavorite = store?.favorites.filter((fav) => fav.uid == bird.uid)
 
+        console.log(isFavorite)
+
         if (isFavorite.length != 0) {
             console.log('true')
             return true;
@@ -22,21 +24,32 @@ const BirdCard = ({ bird }) => {
     }
 
     return (
-        <div className="col-sm-12 offset-md-2 col-md-8 offset-lg-0 col-lg-4">
+        <div className="col-sm-12 offset-md-2 col-md-8 offset-lg-0 col-lg-6 col-xl-4">
             <div className="card mb-3" style={{ minHeight: "95%" }}>
                 <div className="row">
-                    <div className="col-md-6 col-lg-4">
-                        <img src={bird.images.full} className="rounded-start bird-image" alt="..." />
+                    <div className="col-md-6 col-lg-6">
+                        <img src={bird.images.thumb} className="rounded-start bird-image" alt="..." />
                     </div>
-                    <div className="col-md-6 col-lg-8">
+                    <div className="col-md-6 col-lg-6">
                         <div className="card-body">
-                            <h5 className="card-title">{bird.name.spanish}</h5>
+                            <div className='row'>
+                                <h4 className="col-10 card-title">{`${bird.name.spanish}`}</h4>
+                                <small className='col-2 d-flex justify-content-end'>{bird.sort}</small>
+                            </div>
                             <br />
-                            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
+                            <ul className='list-group'>
+                                <li className='list-group-item'>
+                                    <h5>Latín</h5>
+                                    {bird.name.latin}
+                                </li>
+                                <li className='list-group-item'>
+                                    <h5>Inglés</h5>
+                                    {bird.name.english}
+                                </li>
+                            </ul>
 
                         </div>
-                        <div className="d-flex justify-content-evenly align-items-center p-2">
+                        <div className="d-flex justify-content-evenly align-items-center mb-2">
                             <Link to={`/birds/${bird.uid}`}>
                                 <button type='button' className='btn btn-primary'>Ver Mas</button>
                             </Link>

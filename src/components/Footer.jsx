@@ -50,7 +50,7 @@ const Footer = () => {
                 <div className="col-lg-4 my-4">
                     <h3 className='text-center'>Ubicación</h3>
                     <div className='d-flex justify-content-center align-items-top'>
-                        <BsMap className='display-1 p-1 border border-dark' />
+                        <BsMap className='display-1 p-2 border border-dark' style={{ width: "85px" }} />
                         <ul className='d-flex flex-column align-items-start fs-5'>
                             <li className='list-group'>
                                 Vestibulum imperdiet mattis velit

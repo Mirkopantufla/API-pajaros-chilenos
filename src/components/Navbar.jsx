@@ -32,9 +32,9 @@ const Navbar = () => {
                     <Link className='nav-link fs-4 d-flex align-items-center' to="/birds">
                         <LuBird className='me-1 fw-5' />Birds
                     </Link>
-                    <Link className='nav-link fs-4 d-flex align-items-center' to="/about">
+                    {/* <Link className='nav-link fs-4 d-flex align-items-center' to="/about">
                         <MdOutlineQuestionMark /> About
-                    </Link>
+                    </Link> */}
                 </div>
                 <div className="navbar-nav ms-auto">
 
@@ -62,13 +62,13 @@ const Navbar = () => {
                                     return (
                                         <li key={index}
                                             className="bg-dark text-light rounded m-1 d-flex justify-content-between p-2 fs-5">
-                                            <a
+                                            <Link
                                                 href={`/birds/${favorite?.uid}`}
                                                 className="p-2 m-auto"
                                                 style={{ width: "200px" }}
                                             >
                                                 {favorite?.name?.spanish}
-                                            </a>
+                                            </Link>
                                             <span className="m-auto pe-auto border border-light rounded-2 p-2 trashButton">
                                                 <BsFillTrashFill className="fs-5 mx-2" onClick={() => actions.deleteFavorite(favorite)} />
                                             </span>
