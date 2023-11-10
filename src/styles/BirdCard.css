@@ -1,3 +1,7 @@
+h4 {
+    min-height: 60px;
+}
+
 .custom-star {
     color: rgba(214, 214, 0, 0.5);
 }
@@ -12,7 +16,12 @@
 }
 
 .bird-image {
-    height: 100%;
-    width: 100%;
-    object-fit: fill;
+    padding: 2px;
+    height: 360px;
+    width: 290px;
+    object-fit: cover;
+}
+
+.list-group-item {
+    min-height: 90px;
 }

@@ -25,7 +25,7 @@ const BirdCard = ({ bird }) => {
 
     return (
         <div className="col-sm-12 offset-md-2 col-md-8 offset-lg-0 col-lg-6 col-xl-4">
-            <div className="card mb-3" style={{ minHeight: "95%" }}>
+            <div className="card mb-3">
                 <div className="row">
                     <div className="col-md-6 col-lg-6">
                         <img src={bird.images.thumb} className="rounded-start bird-image" alt="..." />
@@ -33,7 +33,7 @@ const BirdCard = ({ bird }) => {
                     <div className="col-md-6 col-lg-6">
                         <div className="card-body">
                             <div className='row'>
-                                <h4 className="col-10 card-title">{`${bird.name.spanish}`}</h4>
+                                <h4 className="col-10 card-title ">{`${bird.name.spanish}`}</h4>
                                 <small className='col-2 d-flex justify-content-end'>{bird.sort}</small>
                             </div>
                             <br />

@@ -1,20 +1,20 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 import { LuBird } from 'react-icons/lu'
-import { MdOutlineQuestionMark } from 'react-icons/md'
 import { BsFillTrashFill } from 'react-icons/bs'
 import Bird from '../images/Bird.png'
 import { Context } from '../context/AppContext';
+import '../styles/Navbar.css'
 
 const Navbar = () => {
 
     const { store, actions } = useContext(Context);
 
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar navbar-expand-lg custom-navbar">
 
             <Link className="navbar-brand border border-dark px-2 rounded me-4 ms-2" to="/">
-                <img src={Bird} alt="" style={{ height: "40px" }} />
+                <img className='custom-logo' src={Bird} alt="" />
             </Link>
             <button
                 className="navbar-toggler"
@@ -48,7 +48,7 @@ const Navbar = () => {
                     >
                         {
                             <small
-                                className="rounded bg-light p-1 text-dark">
+                                className="rounded p-1 text-dark">
                                 {store?.favorites?.length > 0 ? store?.favorites?.length : ""}
                             </small>
                         }
@@ -69,8 +69,8 @@ const Navbar = () => {
                                             >
                                                 {favorite?.name?.spanish}
                                             </Link>
-                                            <span className="m-auto pe-auto border border-light rounded-2 p-2 trashButton">
-                                                <BsFillTrashFill className="fs-5 mx-2" onClick={() => actions.deleteFavorite(favorite)} />
+                                            <span className="m-auto pe-auto border border-light rounded-2 p-2 trashButton" onClick={() => actions.deleteFavorite(favorite)}>
+                                                <BsFillTrashFill className="fs-5 mx-2" />
                                             </span>
                                         </li>
                                     )

@@ -1,0 +1,12 @@
+:root {
+    --custom-base-color: #ECE3CE;
+    --custom-primary-color: #739072;
+    --custom-secondary-color: #4F6F52;
+    --custom-terciary-color: #3A4D39;
+    --custom-black-color: #001102;
+    --custom-transparent-base: #ece3ceba;
+}
+
+body {
+    background-color: var(--custom-base-color);
+}

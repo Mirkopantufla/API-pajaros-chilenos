@@ -1,0 +1,9 @@
+.custom-logo {
+    height: 40px;
+    border-radius: 10px;
+}
+
+.custom-navbar {
+    background-color: var(--custom-base-color);
+    color: var(--custom-terciary-color);
+}

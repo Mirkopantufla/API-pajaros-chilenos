@@ -3,6 +3,7 @@ import { Context } from '../context/AppContext';
 import BirdCard from '../components/BirdCard';
 import Pagination from 'react-js-pagination';
 import { BsBackspaceFill, BsBackspaceReverseFill } from 'react-icons/bs'
+import '../styles/Birds.css'
 
 const Home = () => {
 
@@ -22,8 +23,8 @@ const Home = () => {
     }
 
     return (
-        <div className='container-fluid'>
-            <div className="row bg-dark">
+        <div className='container-fluid custom-wallpaper'>
+            <div className="row p-4">
                 <h1 className='text-light text-center mt-4'>Aves de Chile</h1>
                 <div className="d-flex justify-content-between align-items-center mx-auto p-3 shadow">
                     {
