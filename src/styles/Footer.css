@@ -2,3 +2,8 @@
     color: var(--custom-terciary-color);
     background-color: var(--custom-base-color);
 }
+
+.footer-color a {
+    color: var(--custom-primary-color);
+    text-decoration: underline var(--custom-primary-color);
+}

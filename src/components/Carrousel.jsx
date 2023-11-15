@@ -15,28 +15,28 @@ const Carrousel = () => {
                     <img src="https://picsum.photos/id/337/1500/1000" className="d-block w-100 carrousel-img" alt="..." />
                     <div className="carousel-caption d-none d-md-block">
                         <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
                 <div className="carousel-item">
                     <img src="https://picsum.photos/id/324/1500/1000" className="d-block w-100 carrousel-img" alt="..." />
                     <div className="carousel-caption d-none d-md-block">
                         <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
+                        <p>Proin tortor lorem, posuere eget risus ut, interdum pellentesque dolor. Ut convallis vehicula sapien.</p>
                     </div>
                 </div>
                 <div className="carousel-item">
                     <img src="https://picsum.photos/id/340/1500/1000" className="d-block w-100 carrousel-img" alt="..." />
                     <div className="carousel-caption d-none d-md-block">
                         <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
+                        <p>Non tempus orci suscipit non. Morbi odio mi, eleifend nec massa id, dapibus porttitor libero. Duis lacinia placerat lobortis. Proin eu enim a ligula hendrerit bibendum.</p>
                     </div>
                 </div>
                 <div className="carousel-item">
                     <img src="https://picsum.photos/id/347/1500/1000" className="d-block w-100 carrousel-img" alt="..." />
                     <div className="carousel-caption d-none d-md-block">
                         <h5>Fourth slide label</h5>
-                        <p>Some representative placeholder content for the fourth slide.</p>
+                        <p>Donec dapibus vestibulum feugiat. Proin in condimentum enim. Nullam lobortis metus viverra consequat sollicitudin.</p>
                     </div>
                 </div>
             </div>

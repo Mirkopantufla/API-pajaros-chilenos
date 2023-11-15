@@ -1,6 +1,8 @@
 h1,
 h4,
 h5 {
+    margin: 0;
+    padding: 0;
     color: var(--custom-black-color);
 }
 
@@ -19,7 +21,7 @@ h5 {
 }
 
 .custom-photo-size {
-    max-height: 50vh;
+    max-height: 660px;
     object-fit: contain;
     object-position: top;
 }

@@ -17,11 +17,33 @@ h4 {
 
 .bird-image {
     padding: 2px;
-    height: 360px;
-    width: 290px;
+    height: 100%;
+    max-height: 360px;
+    width: 100%;
     object-fit: cover;
 }
 
 .list-group-item {
     min-height: 90px;
+}
+
+.btn-custom-primary {
+    color: var(--custom-base-color);
+    border: 1px solid black;
+    padding: 8px 18px;
+    border-radius: 30px;
+    background-color: var(--custom-secondary-color);
+    box-shadow: 1px 2px 8px black;
+}
+
+.btn-custom-primary:hover {
+    background-color: var(--custom-primary-color);
+    transform: scale(0.98);
+    box-shadow: 2px 3px 6px black;
+}
+
+@media screen and (min-width: 1400px) {
+    .bird-image {
+        max-width: 380px;
+    }
 }

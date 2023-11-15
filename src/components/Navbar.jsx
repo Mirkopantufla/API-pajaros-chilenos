@@ -30,21 +30,19 @@ const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
                     <Link className='nav-link fs-4 d-flex align-items-center' to="/birds">
-                        <LuBird className='me-1 fw-5' />Birds
+                        <LuBird className='me-1 fw-5' />Aves
                     </Link>
                     {/* <Link className='nav-link fs-4 d-flex align-items-center' to="/about">
                         <MdOutlineQuestionMark /> About
                     </Link> */}
                 </div>
-                <div className="navbar-nav ms-auto">
-
-                </div>
                 <div className="dropstart ms-auto">
                     <Link
                         to="/birds"
-                        className='nav-link fs-4 d-flex align-items-center me-2'
+                        className='nav-link fs-4 d-flex align-items-center me-2 dropdown-toggle'
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
+                        role='button'
                     >
                         {
                             <small
@@ -61,16 +59,17 @@ const Navbar = () => {
                                 store?.favorites?.map((favorite, index) => {
                                     return (
                                         <li key={index}
-                                            className="bg-dark text-light rounded m-1 d-flex justify-content-between p-2 fs-5">
+                                            className="rounded custom-favorite m-1 d-flex justify-content-between p-2 fs-5">
                                             <Link
                                                 to={`/birds/${favorite?.uid}`}
-                                                className="p-2 m-auto"
+                                                className="p-2 m-auto link-offset-1 link-offset-2-hover link-underline-opacity-0 link-underline-opacity-75-hover"
                                                 style={{ width: "200px" }}
+                                                reloadDocument
                                             >
                                                 {favorite?.name?.spanish}
                                             </Link>
-                                            <span className="m-auto pe-auto border border-light rounded-2 p-2 trashButton" onClick={() => actions.deleteFavorite(favorite)}>
-                                                <BsFillTrashFill className="fs-5 mx-2" />
+                                            <span className="m-auto pe-auto border border-light rounded-2 p-2" onClick={() => actions.deleteFavorite(favorite)}>
+                                                <BsFillTrashFill className="fs-5 mx-2 text-light" />
                                             </span>
                                         </li>
                                     )

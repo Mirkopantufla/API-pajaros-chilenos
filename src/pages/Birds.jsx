@@ -24,7 +24,7 @@ const Home = () => {
 
     return (
         <div className='container-fluid custom-wallpaper'>
-            <div className="row p-4">
+            <div className="row">
                 <h1 className='text-light text-center mt-4'>Aves de Chile</h1>
                 <div className="d-flex justify-content-between align-items-center mx-auto p-3 shadow">
                     {
@@ -36,9 +36,9 @@ const Home = () => {
                                             setPage(page - 1)
                                         }
                                     }} />
-                                <BsBackspaceReverseFill className={"fs-2 text-light" + (page <= (store?.birds?.length / 9) - 1 ? "" : "disabled")}
+                                <BsBackspaceReverseFill className={"fs-2 text-light" + (page <= (store?.birds?.length / 10) - 1 ? "" : "disabled")}
                                     onClick={() => {
-                                        if (page <= (store?.birds?.length / 9) - 1) {
+                                        if (page <= (store?.birds?.length / 10) - 1) {
                                             setPage(page + 1)
                                         }
                                     }} />
@@ -47,12 +47,12 @@ const Home = () => {
                     }
                 </div>
 
-                <div className="row">
+                <div className="row ms-1">
                     {
-                        //Valido si existen los 'birds' dentro de 'store', si hay, que me traiga 9 resultados de todo el array
+                        //Valido si existen los 'birds' dentro de 'store', si hay, que me traiga 10 resultados de todo el array
                         //previamente guardado en el context
                         store?.birds ?
-                            store?.birds?.slice(page == 1 ? 0 : (9 * page) - 9, 9 * page).map((bird) => {
+                            store?.birds?.slice(page == 1 ? 0 : (10 * page) - 10, 10 * page).map((bird) => {
                                 return (
                                     <BirdCard key={bird.sort} bird={bird} />
                                 )
@@ -69,7 +69,7 @@ const Home = () => {
                             <Pagination
                                 activePage={page}
                                 totalItemsCount={store?.birds.length || 0}
-                                itemsCountPerPage={9}
+                                itemsCountPerPage={10}
                                 itemClass="page-item"
                                 linkClass="page-link"
                                 pageRangeDisplayed={5}

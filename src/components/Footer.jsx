@@ -6,7 +6,7 @@ import { MdContactMail } from 'react-icons/md'
 
 const Footer = () => {
 
-    const classnameLink = "link-offset-2 link-offset-3-hover link-underline-dark link-underline-opacity-0 link-underline-opacity-75-hover text-dark";
+    const classnameLink = "link-offset-2 link-offset-3-hover link-underline-opacity-0 link-underline-opacity-75-hover";
 
     return (
         <footer className='container-fluid footer-color'>
@@ -15,33 +15,33 @@ const Footer = () => {
                     <h3 className='text-center'>Birds Index</h3>
                     <div className='d-flex justify-content-center align-items-top'>
                         <BsFillHouseDoorFill className='display-1 p-1 border border-dark' />
-                        <ul className='d-flex flex-column align-items-center fs-5'>
+                        <ul className='d-flex flex-column align-items-start fs-5'>
                             <li className='list-group'>
                                 <Link
                                     className={classnameLink}
                                     to='/'>
-                                    Vestibulum imperdiet mattis velit
+                                    Donec in mollis mauris
                                 </Link>
                             </li>
                             <li className='list-group'>
                                 <Link
                                     className={classnameLink}
                                     to='/'>
-                                    Vestibulum imperdiet mattis velit
+                                    Lorem ipsum dolor sit amet
                                 </Link>
                             </li>
                             <li className='list-group'>
                                 <Link
                                     className={classnameLink}
                                     to='/'>
-                                    Vestibulum imperdiet mattis velit
+                                    Proin varius et magna quis
                                 </Link>
                             </li>
                             <li className='list-group'>
                                 <Link
                                     className={classnameLink}
                                     to='/'>
-                                    Vestibulum imperdiet mattis velit
+                                    Aenean malesuada magna eu rhoncus
                                 </Link>
                             </li>
                         </ul>
@@ -53,16 +53,13 @@ const Footer = () => {
                         <BsMap className='display-1 p-2 border border-dark' style={{ width: "85px" }} />
                         <ul className='d-flex flex-column align-items-start fs-5'>
                             <li className='list-group'>
-                                Vestibulum imperdiet mattis velit
+                                Curabitur varius lectus nec tempus finibus.
                             </li>
                             <li className='list-group'>
-                                Vestibulum imperdiet mattis velit
+                                Fusce vitae orci a odio pulvinar feugiat.
                             </li>
                             <li className='list-group'>
-                                Vestibulum imperdiet mattis velit
-                            </li>
-                            <li className='list-group'>
-                                Neque porro quisquam est qui dolorem ipsum quia dolor sit amet
+                                Aenean mattis, 1657
                             </li>
                         </ul>
                     </div>

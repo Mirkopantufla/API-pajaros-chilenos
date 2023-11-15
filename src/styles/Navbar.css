@@ -7,3 +7,11 @@
     background-color: var(--custom-base-color);
     color: var(--custom-terciary-color);
 }
+
+.custom-favorite {
+    background-color: var(--custom-base-color);
+}
+
+.custom-favorite a {
+    color: var(--custom-secondary-color);
+}

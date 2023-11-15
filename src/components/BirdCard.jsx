@@ -24,13 +24,13 @@ const BirdCard = ({ bird }) => {
     }
 
     return (
-        <div className="col-sm-12 offset-md-2 col-md-8 offset-lg-0 col-lg-6 col-xl-4">
+        <div className="col-12 offset-md-2 col-md-8 offset-lg-0 col-lg-6 col-xl-6">
             <div className="card mb-3">
                 <div className="row">
-                    <div className="col-md-6 col-lg-6">
+                    <div className="col-md-6 col-lg-7">
                         <img src={bird.images.thumb} className="rounded-start bird-image" alt="..." />
                     </div>
-                    <div className="col-md-6 col-lg-6">
+                    <div className="col-md-6 col-lg-5">
                         <div className="card-body">
                             <div className='row'>
                                 <h4 className="col-10 card-title ">{`${bird.name.spanish}`}</h4>
@@ -51,7 +51,7 @@ const BirdCard = ({ bird }) => {
                         </div>
                         <div className="d-flex justify-content-evenly align-items-center mb-2">
                             <Link to={`/birds/${bird.uid}`}>
-                                <button type='button' className='btn btn-primary'>Ver Mas</button>
+                                <button type='button' className='btn-custom-primary'>Ver Mas</button>
                             </Link>
                             <AiFillStar
                                 className={`fs-1 border border-2 rounded border-dark ${isFavorite() ? 'custom-star-active' : 'custom-star'}`}
